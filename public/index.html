@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THUGKEED TECH - Luxury Hub</title>
+  <style>
+    /* Reset + Font */
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+    html{scroll-behavior:smooth;}
+    body{background:linear-gradient(135deg,#000,#1a1a1a,#4a4a4a);color:#fff;overflow-x:hidden;position:relative;}
+    
+    /* Header */
+    header{background:rgba(0,0,0,.85);padding:20px;text-align:center;position:sticky;top:0;z-index:100;border-bottom:2px solid #c5a34a;}
+    header h1{font-size:2.5rem;background:linear-gradient(90deg,#c5a34a,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:glow 3s infinite alternate;}
+    @keyframes glow{from{text-shadow:0 0 10px #c5a34a;}to{text-shadow:0 0 25px #ffd700;}}
+    nav{margin-top:15px;}
+    nav a{margin:0 15px;text-decoration:none;font-weight:bold;color:#c5a34a;transition:.3s;}
+    nav a:hover{color:#ffd700;}
+
+    /* Hero */
+    .hero{height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;background:url('https://images.unsplash.com/photo-1549921296-3a531d8d1a6a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;text-align:center;position:relative;overflow:hidden;}
+    .hero::after{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.6);}
+    .hero-content{position:relative;z-index:2;}
+    .hero h2{font-size:3rem;background:linear-gradient(90deg,#c5a34a,#ffd700);-webkit-background-clip:text;-webkit-text-fill-color:transparent;animation:slideIn 2s ease-in-out;}
+    @keyframes slideIn{from{opacity:0;transform:translateY(-50px);}to{opacity:1;transform:translateY(0);}}
+    .hero p{margin-top:15px;font-size:1.2rem;color:#ddd;}
+    .btn{margin-top:20px;padding:12px 25px;background:linear-gradient(90deg,#c5a34a,#ffd700);border:none;border-radius:30px;color:#000;font-weight:bold;cursor:pointer;transition:transform .3s,box-shadow .3s;}
+    .btn:hover{transform:scale(1.1);box-shadow:0 0 20px #ffd700,0 0 40px #c5a34a;}
+
+    /* Particle Canvas */
+    #particles{position:absolute;top:0;left:0;width:100%;height:100%;z-index:1;}
+
+    /* Sections */
+    .section{padding:80px 20px;text-align:center;position:relative;z-index:2;}
+    .section h3{font-size:2rem;margin-bottom:20px;color:#ffd700;}
+    .cards{display:flex;flex-wrap:wrap;justify-content:center;gap:20px;}
+    .card{background:#111;border:1px solid #c5a34a;border-radius:15px;padding:20px;width:280px;box-shadow:0 0 15px rgba(197,163,74,.5);transition:transform .3s,box-shadow .3s;}
+    .card:hover{transform:translateY(-10px);box-shadow:0 0 25px #ffd700,0 0 40px #c5a34a;}
+    .card h4{margin-bottom:10px;color:#ffd700;}
+    .card p{color:#ccc;}
+
+    /* Footer */
+    footer{background:#000;padding:30px;text-align:center;border-top:2px solid #c5a34a;}
+    footer p{color:#aaa;}
+    footer a{color:#c5a34a;margin:0 10px;text-decoration:none;}
+    footer a:hover{color:#ffd700;}
+  </style>
+</head>
+<body>
+  <!-- Particle Canvas -->
+  <canvas id="particles"></canvas>
+
+  <header>
+    <h1>⚡ THUGKEED TECH ⚡</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to THUGKEED TECH</h2>
+      <p>Luxury. Power. Innovation. — All by Owner THUGKEED.</p>
+      <button class="btn">Explore Now</button>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About THUGKEED</h3>
+    <p>THUGKEED TECH is a luxury-driven developer hub bringing next-level web services, bots, and tech tools. Built with passion, branded with style, and owned fully by <b>THUGKEED</b>.</p>
+  </section>
+
+  <section class="section" id="projects">
+    <h3>Our Legendary Projects</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>⚡ THUGKEED-XMD</h4>
+        <p>A powerful WhatsApp bot with commands, automation, and AI integration.</p>
+      </div>
+      <div class="card">
+        <h4>💻 THUGKEED PANEL</h4>
+        <p>Luxury hosting panel to deploy & manage bots seamlessly.</p>
+      </div>
+      <div class="card">
+        <h4>🎶 THUGKEED MP3 JUICE</h4>
+        <p>Download your favorite songs & videos with style.</p>
+      </div>
+      <div class="card">
+        <h4>👾 HACKLAB v2</h4>
+        <p>Simulated dark-web tools with realistic animations & hacking utilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact & Connect</h3>
+    <p>Stay connected with the THUGKEED community.</p>
+    <p>
+      <a href="https://github.com/thugkeedxxx" target="_blank">GitHub</a> |
+      <a href="https://whatsapp.com/channel/0029VbB7a9v6LwHqDUERef0M" target="_blank">WhatsApp Channel</a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2025 THUGKEED TECH — All Rights Reserved.</p>
+    <p>Powered by <b>THUGKEED</b></p>
+  </footer>
+
+  <!-- Particle JS -->
+  <script>
+    const canvas = document.getElementById('particles');
+    const ctx = canvas.getContext('2d');
+    let particlesArray;
+
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    window.addEventListener('resize',()=>{
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      init();
+    });
+
+    class Particle{
+      constructor(){
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = Math.random()*3 + 1;
+        this.speedX = Math.random()*1 - 0.5;
+        this.speedY = Math.random()*1 - 0.5;
+      }
+      update(){
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if(this.x > canvas.width) this.x = 0;
+        if(this.x < 0) this.x = canvas.width;
+        if(this.y > canvas.height) this.y = 0;
+        if(this.y < 0) this.y = canvas.height;
+      }
+      draw(){
+        ctx.fillStyle = '#ffd700';
+        ctx.beginPath();
+        ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+        ctx.fill();
+      }
+    }
+
+    function init(){
+      particlesArray = [];
+      let numberOfParticles = 100;
+      for(let i=0;i<numberOfParticles;i++){
+        particlesArray.push(new Particle());
+      }
+    }
+
+    function animate(){
+      ctx.clearRect(0,0,canvas.width,canvas.height);
+      for(let i=0;i<particlesArray.length;i++){
+        particlesArray[i].update();
+        particlesArray[i].draw();
+      }
+      requestAnimationFrame(animate);
+    }
+
+    init();
+    animate();
+  </script>
+</body>
+</html>
